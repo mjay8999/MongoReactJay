@@ -1,0 +1,14 @@
+// Find documents where 'payment' is less than 500
+db.transactions.find({ payment: { $lt: 500 } });
+
+// Update multiple documents to add a 'status' field
+db.transactions.updateMany({}, { $set: { status: 'completed' } });
+
+// Sort documents by 'payment' in descending order
+db.transactions.find().sort({ payment: -1 });
+
+// Limit the output to only 3 documents
+db.transactions.find().limit(3);
+
+// Add a new field 'timestamp' to a specific document
+db.transactions.updateOne({ name: 'Alice' }, { $set: { timestamp: new Date() } });

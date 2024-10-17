@@ -1,0 +1,30 @@
+// DetailsComponent.js: Using Props
+import React from 'react';
+
+function Details(props) {
+  return (
+    <div>
+      <h2>Name: {props.name}</h2>
+      <p>Age: {props.age}</p>
+      <p>Location: {props.location}</p>
+    </div>
+  );
+}
+
+export default Details;
+
+
+// App.js for DetailsComponent
+import React from 'react';
+import Details from './DetailsComponent';
+
+function App() {
+  return (
+    <div>
+      {/* Passing props to the Details component */}
+      <Details name="Jay" age="22" location="Mumbai" />
+    </div>
+  );
+}
+
+export default App;

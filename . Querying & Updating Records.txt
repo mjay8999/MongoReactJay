@@ -1,0 +1,30 @@
+// Find documents where 'name' is 'Tom'
+db.transactions.find({ name: 'Tom' });
+
+// Find documents with 'payment' greater than 400
+db.transactions.find({ payment: { $gt: 400 } });
+
+// Find documents where the 'note' field is missing or null
+db.transactions.find({ note: null });
+db.transactions.find({ price: { $exists: false } });
+
+// Update the 'payment' field for 'Jay'
+db.transactions.updateOne({ name: 'Jay' }, { $set: { payment: 700 } });
+
+// Delete a document where 'id' is 2 (deletes 'Jay')
+db.transactions.deleteOne({ id: 2 });
+// Find documents where 'name' is 'Tom'
+db.transactions.find({ name: 'Tom' });
+
+// Find documents with 'payment' greater than 400
+db.transactions.find({ payment: { $gt: 400 } });
+
+// Find documents where the 'note' field is missing or null
+db.transactions.find({ note: null });
+db.transactions.find({ price: { $exists: false } });
+
+// Update the 'payment' field for 'Jay'
+db.transactions.updateOne({ name: 'Jay' }, { $set: { payment: 700 } });
+
+// Delete a document where 'id' is 2 (deletes 'Jay')
+db.transactions.deleteOne({ id: 2 });

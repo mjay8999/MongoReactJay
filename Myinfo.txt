@@ -1,0 +1,30 @@
+// Practical: Displaying a Greeting
+function MyInfo() {
+  return (
+    <div style={{ color: 'red', textAlign: 'center' }}>
+      <h1>Hello, Jay!</h1>
+      <ol>
+        <li>Switzerland</li>
+        <li>Norway</li>
+        <li>Landore</li>
+      </ol>
+    </div>
+  );
+}
+export default MyInfo;
+
+/* Instructions:
+1. Create a file named 'MyInfoComponent.js' in the 'src' folder of your React project.
+2. Copy this code into that file.
+3. In 'App.js', import the component:
+   import MyInfo from './MyInfoComponent';
+4. Use the component inside the App function:
+   function App() {
+     return (
+       <div>
+         <MyInfo />
+       </div>
+     );
+   }
+5. Run your React project using 'npm start'.
+*/

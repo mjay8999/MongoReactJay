@@ -1,0 +1,8 @@
+// Import data from a CSV file into 'transactions' collection
+mongoimport --db bank --collection transactions --type csv --file transactions.csv --headerline
+
+// Export data from 'transactions' collection to a JSON file
+mongoexport --db bank --collection transactions --out transactions.json
+
+// Export data to a CSV file (includes selected fields only)
+mongoexport --db bank --collection transactions --type=csv --fields=name,payment --out transactions.csv;

@@ -1,0 +1,17 @@
+// Switch to the 'bank' database (or create if it doesn't exist)
+use bank;
+
+// Create a 'transactions' collection
+db.createCollection('transactions');
+
+// Insert records into the 'transactions' collection
+db.transactions.insertMany([
+  { id: 1, name: 'Tom', payment: 400 },
+  { id: 2, name: 'Khushi', payment: 300 },
+  { id: 3, name: 'Dhruti', payment: 600, note: "Paid in full" },
+  { id: 4, name: 'Shreyas', payment: 500 },
+  { id: 5, name: 'Sahil', payment: 200, note: null }
+]);
+
+// Find all documents in 'transactions' collection
+db.transactions.find().pretty();

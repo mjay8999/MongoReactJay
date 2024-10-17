@@ -1,0 +1,13 @@
+// Aggregate: Group by 'status' and get total payments
+db.transactions.aggregate([
+  { $group: { _id: "$status", totalPayments: { $sum: "$payment" } } }
+]);
+
+// Create an index on the 'name' field for faster search
+db.transactions.createIndex({ name: 1 });
+
+// Find records using the 'name' index
+db.transactions.find({ name: 'Alice' });
+
+// Drop the index on 'name'
+db.transactions.dropIndex({ name: 1 });
